@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Mohammed Ali  Portfolio</title>
+    <title>Mohammed Ali Portfolio</title>
 </head>
 <body>
     <nav>
         <div class="nav-container">
             <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
-                Mohammed Ali  <span>Ineflas</span>
+                Mohammed Ali <span>Ineflas</span>
             </div>
             <div class="links">
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
@@ -20,34 +20,47 @@
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#">Skills</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#">Services</a></div>
                 <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#">Contact</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" id="hamburgMenu" aria-label="Toggle menu"></i>
         </div>
-        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
-    </div>
         <div class="dropdown">
             <div class="links">
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Skills</a>
-                <a href="#">Service</a>
+                <a href="#">Services</a>
                 <a href="#">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+                <i class="fa-solid fa-xmark cancel" id="cancelMenu" aria-label="Close menu"></i>
             </div>
         </div>
     </nav>
+
     <section>
         <div class="main-container">
             <div class="image" data-aos="zoom-out" data-aos-duration="3000">
-                <img src="main.png" alt="">
+                <img src="main.png" alt="Mohammed Ali's profile picture">
             </div>
             <div class="content">
-                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey I'm <span>Mohammed Ali</span></h1>
-                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
-                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Hi, I'm Mohammed, a university student specializing in database management with a strong passion for cybersecurity. I am constantly expanding my knowledge in coding, mathematics, and security, with a special interest in penetration testing and ethical hacking. My goal is to build a career in cybersecurity, where I can apply my skills to protect systems and data. I am a serious and hardworking individual, always eager to learn and take on new challenges.</p>
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Hey, I'm <span>Mohammed Ali</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">
+                    I'm a <span class="typewriter-text"></span><label for="">|</label>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">
+                    Hi, I'm Mohammed, a university student specializing in database management with a strong passion for cybersecurity. I am constantly expanding my knowledge in coding, mathematics, and security, with a special interest in penetration testing and ethical hacking. My goal is to build a career in cybersecurity, where I can apply my skills to protect systems and data. I am a serious and hardworking individual, always eager to learn and take on new challenges.
+                </p>
                 <div class="social-links">
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/mohammed_ali_ins/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com/in/mohammed-ali-ineflas-529541336/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://github.com/mohammed-ali" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mohammed_ali_ins/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/mohammed-ali-ineflas-529541336/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                    <a href="#" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
                 </div>
                 <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
                     <button>Hire me</button>
@@ -55,10 +68,21 @@
             </div>
         </div>
     </section>
+
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      AOS.init({offset:0});
+        AOS.init({offset:0});
+
+        // Adding event listeners for the hamburger and cancel buttons
+        document.getElementById('hamburgMenu').addEventListener('click', function() {
+            document.querySelector('.dropdown').classList.toggle('active');
+        });
+
+        document.getElementById('cancelMenu').addEventListener('click', function() {
+            document.querySelector('.dropdown').classList.remove('active');
+        });
     </script>
-    <script src="script.js" ></script>
+    <script src="script.js"></script>
 </body>
 </html>
+
